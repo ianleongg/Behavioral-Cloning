@@ -87,7 +87,7 @@ python drive.py model.h5
 
 ![alt text][image7]
 
-* The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track. 									|
+* The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track. 									
  
 #### 3. Model parameter tuning
 
@@ -107,7 +107,8 @@ python drive.py model.h5
   - [images](./data/IMG)
   - [csv file for driving log](./data/driving_log.csv)
 
-* The simulator captures images from three cameras mounted on the car: a center, right and left camera with its steering, throttle commands for each frame recorded. An example below can be seen where it contains the left, center, and right view in order:
+* The simulator captures images from three cameras mounted on the car: a center, right and left camera with its steering, throttle commands for each frame recorded. 
+  - An example below can be seen where it contains the left, center, and right view in order:
 
 ![alt text][image4]
 
@@ -120,7 +121,6 @@ python drive.py model.h5
 Left original:
 
 ![alt text][image13]
-
 Left flipped:
 
 ![alt text][image8]
