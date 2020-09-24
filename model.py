@@ -2,6 +2,7 @@ import csv
 import cv2
 import numpy as np
 import sklearn
+import random
 
 # read log data
 samples = []
@@ -21,7 +22,16 @@ print("Number of validation samples: ",len(validation_samples))
 
 # load image from row/index
 def load_image(index, sample):
-    return cv2.imread('data/IMG/' + sample[index].split('/')[-1])
+    image = cv2.imread('data/IMG/' + sample[index].split('/')[-1])
+	#Generate random brightness function, produce darker transformation
+	##Convert 2 HSV colorspace from BGR colorspace
+    hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+    ##Generate new random brightness
+    rand = random.uniform(0.3,1.0)
+    hsv[:,:,2] = rand*hsv[:,:,2]
+    ##Convert back to RGB colorspace
+    new_img = cv2.cvtColor(hsv, cv2.COLOR_HSV2RGB)
+    return new_img  
 
 # flip image
 def flip_input(image, angle):
@@ -30,7 +40,7 @@ def flip_input(image, angle):
     return (processed_image, processed_angle)
 
  # generate images to save memory   
-def generator(samples, batch_size = 32):
+def generator(samples, batch_size = 128):
     num_samples = len(samples)
     while(1):#loop while always true
         shuffle(samples)
@@ -76,7 +86,7 @@ def generator(samples, batch_size = 32):
             yield sklearn.utils.shuffle(X_train , y_train)
 
 # Set our batch size
-batch_size=32
+batch_size=128
 
 # compile and train the model using the generator function
 train_generator = generator(train_samples, batch_size=batch_size)
@@ -142,7 +152,7 @@ model.summary()
 model.compile(loss='mse', optimizer ='adam') 
 
 # Fit the model
-history_object = model.fit_generator(train_generator, steps_per_epoch=(len(train_samples) / batch_size), validation_data=validation_generator, validation_steps=(len(validation_samples)/batch_size), epochs=10, verbose=1)
+history_object = model.fit_generator(train_generator, steps_per_epoch=(len(train_samples) / batch_size), validation_data=validation_generator, validation_steps=(len(validation_samples)/batch_size), epochs=20, verbose=1)
 
 # Save model                   
 model.save('model.h5')

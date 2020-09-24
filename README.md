@@ -81,11 +81,11 @@ python drive.py model.h5
   - Number of training samples:  6428
   - Number of validation samples:  1608
 
-* The ideal number of epochs was 10 as evidenced by a mean squared error loss graph to avoid underfitting/ overfitting.
+* The ideal number of epochs was 20 as evidenced by a mean squared error loss graph to avoid underfitting/ overfitting.
 
 ![alt text][image7]
 
-* The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track. 									
+* The model's batch size was 128 and was tested by running it through the simulator and ensuring that the vehicle could stay on the track. 									
  
 #### 3. Model parameter tuning
 
@@ -140,12 +140,13 @@ python drive.py model.h5
 
 ![alt text][image5]
 
+* When loading the data images, a random brightness function was utlized to produce darker transformation by using HSV colorspace.
+
 ### Conclusion
 
 * Ultimately, it was a great exposure to use train, test, and validate a CNN model with Keras.
 * The data can be pre-processed even further which includes manipulating color spaces, etc.
 * The final product can be seen below:
 
-[Birds-Eye View](./Images_forReadMe/birds_eye_view.mp4)
-[Drivers View](./Images_forReadMe/drivers_view.mp4)
+|[Birds-Eye View](./Images_forReadMe/birds_eye_view.mp4) | [Drivers View](./Images_forReadMe/drivers_view.mp4) |
 
