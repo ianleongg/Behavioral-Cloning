@@ -118,12 +118,10 @@ python drive.py model.h5
 
 * To augment the data set, I also flipped images and angles thinking that this would increase the training set available. For example, here are images that has then been flipped:
 
-Left original:
+| Left Original  | Left Flipped |
+| ------------- | ------------- |
+| ![alt text][image13]| ![alt text][image8] |
 
-![alt text][image13]
-Left flipped:
-
-![alt text][image8]
 
 Center original:
 
