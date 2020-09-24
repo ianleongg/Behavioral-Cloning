@@ -47,7 +47,9 @@ The goals / steps of this project are the following:
 | Birds-eye View  | Drivers view |
 | ------------- | ------------- |
 | ![alt text][image1]| ![alt text][image6] |
+|Note: The vehicle can be more stable at slower speeds but still maintained its lane keeping at max speed setting.|
 
+  
 ### Repo contained
 
 #### 1. Functional code
