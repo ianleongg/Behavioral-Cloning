@@ -44,13 +44,9 @@ The goals / steps of this project are the following:
 
 - Below is the result for the CNN model to output a steering angle to an autonomous vehicle at its max speed setting (~30mph):
 
-Birds-eye View:
-
-![alt text][image1] 
-
-Drivers View:
-
-![alt text][image6]
+| Birds-eye View  | Drivers view |
+| ------------- | ------------- |
+| ![alt text][image1]| ![alt text][image6] |
 
 ### Repo contained
 
@@ -108,9 +104,10 @@ python drive.py model.h5
   - [csv file for driving log](./data/driving_log.csv)
 
 * The simulator captures images from three cameras mounted on the car: a center, right and left camera with its steering, throttle commands for each frame recorded. 
-  - An example below can be seen where it contains the left, center, and right view in order:
 
-![alt text][image4]
+| Left  | Center |  Right |
+| ------------- | ------------- | ------------- |
+| ![alt text][image13]| ![alt text][image2] | ![alt text][image9] |
 
 * The first 10 recorded data in the csv file can be seen as the following:
 
@@ -122,22 +119,13 @@ python drive.py model.h5
 | ------------- | ------------- |
 | ![alt text][image13]| ![alt text][image8] |
 
+| Center Original  | Center Flipped |
+| ------------- | ------------- |
+| ![alt text][image2]| ![alt text][image3] |
 
-Center original:
-
-![alt text][image2]
-
-Center flipped:
-
-![alt text][image3]
-
-Right original:
-
-![alt text][image9]
-
-Right flipped:
-
-![alt text][image10]
+| Right Original  | Right Flipped |
+| ------------- | ------------- |
+| ![alt text][image9]| ![alt text][image10] |
 
 * By using not only the center image but with also both left and right images, the training set data was also increased.
   - From the perspective of the left camera, the steering angle would be less than the steering angle from the center camera.
