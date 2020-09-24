@@ -24,7 +24,7 @@ The goals / steps of this project are the following:
 [image7]: ./Images_forReadMe/model.png "model"
 [image8]: ./Images_forReadMe/left_flip.jpg "left flip"
 [image9]: ./Images_forReadMe/right.jpg "right"
-[image10]: ./Images_forReadMe/right_flip.png "right flip"
+[image10]: ./Images_forReadMe/right_flip.jpg "right flip"
 [image11]: ./Images_forReadMe/sample_csv.png "csv"
 [image12]: ./Images_forReadMe/layer.png "layer"
 [image13]: ./Images_forReadMe/left.jpg "left"
