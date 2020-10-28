@@ -150,3 +150,26 @@ python drive.py model.h5
 
 |[Birds-Eye View](./Images_forReadMe/birds_eye_view.mp4) | [Drivers View](./Images_forReadMe/drivers_view.mp4) |
 
+### More resources/ information
+* [This article](https://repository.tudelft.nl/islandora/object/uuid%3Af536b829-42ae-41d5-968d-13bbaa4ec736) adds temporal visual cues using LSTM 
+* Another alternative is [this architecture](https://github.com/commaai/research/blob/master/train_steering_model.py) developed by [comma.ai](https://comma.ai/)
+* Another technique commonly used is [L2 regularization](https://keras.io/api/layers/regularizers/).
+* Check [this article](http://www.cs.toronto.edu/~rsalakhu/papers/srivastava14a.pdf) for an in-depth explanation of Dropout as that's another alternative here.
+* Check [this article](https://ruder.io/optimizing-gradient-descent/index.html#adam) for a nice description and comparison of different algorithms.
+* Instead of using a fixed number of epochs one alternative is using [Keras' EarlyStopping](https://keras.io/api/callbacks/#earlystopping) callback which stops training the model when it stops improving.
+* Another useful callback is [ModelCheckpoint](https://keras.io/api/callbacks/#modelcheckpoint) which can be used to save the best model found during training.
+
+#### Behavioral Cloning
+* The below paper shows one of the techniques Waymo has researched using imitation learning (aka behavioral cloning) to drive a car.
+- [ChauffeurNet: Learning to Drive by Imitating the Best and Synthesizing the Worst by M. Bansal, A. Krizhevsky and A. Ogale](https://arxiv.org/abs/1812.03079)
+
+#### Object Detection and Tracking
+* The below papers include various deep learning-based approaches to 2D and 3D object detection and tracking.
+- [SSD: Single Shot MultiBox Detector by W. Liu, et. al.](https://arxiv.org/abs/1512.02325)
+- [VoxelNet: End-to-End Learning for Point Cloud Based 3D Object Detection by Y. Zhou and O. Tuzel](https://arxiv.org/abs/1711.06396)
+- [Fast and Furious: Real Time End-to-End 3D Detection, Tracking and Motion Forecasting with a Single Convolutional Net by W. Luo, et. al.](https://openaccess.thecvf.com/content_cvpr_2018/papers/Luo_Fast_and_Furious_CVPR_2018_paper.pdf)
+
+#### Semantic Segmentation
+* The below paper concerns a technique called semantic segmentation, where each pixel of an image gets classified individually
+- [SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation by V. Badrinarayanan, A. Kendall and R. Cipolla](https://arxiv.org/abs/1511.00561)
+
